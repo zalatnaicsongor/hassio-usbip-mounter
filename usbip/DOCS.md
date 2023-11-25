@@ -18,6 +18,11 @@ This add-on is intended to allow you to mount one or multiple usbip devices to y
 
 Usbip is not limited to bluetooth adapters as most usb devices should be able to function as long as they are natively supported by Home Assistant.
 
+For proper work, protection mode must be disabled on add-on.
+
+![image](https://github.com/irakhlin/hassio-usbip-mounter/assets/64019471/c9c3faef-0501-4652-9dfa-4c58ce3b05ba)
+
+
 ## Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
