@@ -5,6 +5,3 @@
 # ==============================================================================
 
 bashio::log.info "Starting the USBIP Daemon"
-
-## Run the usbipd daemon
-exec /usr/sbin/usbipd < /dev/null
