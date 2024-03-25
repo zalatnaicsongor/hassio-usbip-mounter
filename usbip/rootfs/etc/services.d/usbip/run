@@ -5,8 +5,6 @@
 # ==============================================================================
 
 # Wait for usbipd to become available
-s6-svwait -u -t 5000 /run/service/usbipd
-
 bashio::log.info "Attaching usbip devices"
 
 ## Run the attach device script
