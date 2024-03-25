@@ -10,14 +10,6 @@ s6-svwait -u -t 5000 /run/service/usbipd
 bashio::log.info "Attaching usbip devices"
 
 ## Run the attach device script
-
-mount -o remount -t sysfs sysfs /sys
-
-for p in $(/usr/sbin/usbip port | grep Port | cut -b 6-7)
-do
-  /usr/sbin/usbip detach -p "$p"
-done
-
 /usr/local/bin/mount_devices
 
 ## Dont rerun this service after initial attach
