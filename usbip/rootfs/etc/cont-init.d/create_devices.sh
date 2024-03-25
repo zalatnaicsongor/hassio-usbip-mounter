@@ -30,6 +30,7 @@ if ! bashio::fs.file_exists "${mount_script}"; then
   echo 'mount -o remount -t sysfs sysfs /sys' >> "${mount_script}"
   echo '/usr/sbin/usbip port' >> "${mount_script}"
   echo 'for p in $(/usr/sbin/usbip port | grep Port | cut -b 6-7); do /usr/sbin/usbip --debug detach -p "$p"; done' >> "${mount_script}"
+  echo 'sleep 5' >> "${mount_script}"
   for device in $(bashio::config 'devices|keys'); do
     server_address=$(bashio::config "devices[${device}].server_address")
     bus_id=$(bashio::config "devices[${device}].bus_id")
