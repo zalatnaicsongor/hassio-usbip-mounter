@@ -1,7 +1,0 @@
-#!/command/with-contenv bashio
-# ==============================================================================
-# Home Assistant Add-on: USBIP Mounter
-# Start the usbipd daemon service
-# ==============================================================================
-
-bashio::log.info "Starting the USBIP Daemon"
